@@ -2,7 +2,6 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import sqlite3
 import os
-import os
 from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
@@ -117,5 +116,8 @@ def delete_plan(plan_id):
 
 if __name__ == '__main__':
     if not os.path.exists(DB_FILE):
-        init_db()
-    app.run(debug=True)
+        from click.testing import CliRunner
+        runner = CliRunner()
+        runner.invoke(init_db)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)

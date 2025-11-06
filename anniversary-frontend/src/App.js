@@ -1,8 +1,8 @@
 import { Routes, Route } from "react-router-dom";
-import NavBar from "./components/NavBar";
-import Landing from "./pages/Landing";
-import Timeline from "./pages/Timeline";
-import FuturePlans from "./pages/FuturePlans";
+import NavBar from "../../anniversary-frontend/src/components/NavBar";
+import Landing from "../../anniversary-frontend/src/pages/Landing";
+import Timeline from "../../anniversary-frontend/src/pages/Timeline";
+import FuturePlans from "../../anniversary-frontend/src/pages/FuturePlans";
 import './App.css';
 
 export default function App() {
